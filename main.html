@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Chat Room</title>
+</head>
+
+<body id="body1">
+
+    <header> </header>
+    <!-- <div class="first-part">  -->
+    <div class="container-main">
+        <div class="container1">
+            <div class="sub">
+                <div id="top-header">
+                    <img src="Images/logo.jfif" id="logo" alt="">
+                    <h4 id="h4"><span id="user"></span></h4>
+                    <h2 style="margin-left: 490px; margin-top: 20px; position: fixed;">Tecnovators whatsapp</h2>
+                </div>
+                <!-- FirstPart -->
+                <div class="form">
+                    <form id="form1" onsubmit="return event.preventDefault()">
+
+                        <h2>Let's Join Tecnovators Group</h2>
+                        <input type="text" id="username" placeholder="Enter Username" name="Name" autocomplete="off">
+                        <span id="error">Please Fill Out This Field</span>
+                        <button id="btn1" type="submit">Join Chat</button>
+                    </form>
+                </div>
+
+                <!-- Main content -->
+                <div class="main-content">
+                    <div class="main" id="disp">
+                       <!-- <span id="userinfo"></span>  -->
+                      <!-- <h4 id="getmsg" ></h4> -->
+                         
+                    </div>
+                </div>
+    </div>
+            <!-- /FirstPart -->
+
+
+
+            <div id="footer">
+                <form class="next" id="formreset" onsubmit="return event.preventDefault()">
+                    <span style="font-size: 30px;  display: flex; margin-top: 10px; display: inline-block;">
+                        &#128516</span>  
+                    <input type="text" id="message" placeholder="Enter Message" name="Message" autocomplete="off">
+                    <button type="submit" id="sendbtn">Send</button>
+                </form>
+            </div>
+        </div>
+    </div>
+
+
+    </div>
+
+    <!-- <div class="form-container">
+        
+    </div> -->
+
+
+    <script>
+
+        function validate() {
+            let username = document.getElementById("username").value;
+            let error = document.getElementById("error");
+            let form = document.getElementsByClassName("form")[0];
+            let next = document.getElementsByClassName("next")[0]
+            let user = document.getElementById("user");
+            let firstpart = document.getElementById("first-part");
+            if (username.length = 0 || username.length < 3) {
+                error.style.visibility = "visible";
+                console.log("working")
+            }
+            else if (username.length >= 4) {
+                error.style.visibility = "hidden";
+                form.style.display = "none"
+                next.style.visibility = "visible"
+                user.innerText = `Welcome ${username}`
+
+            }
+        }
+
+        let btn1 = document.getElementById("btn1");
+        btn1.addEventListener('click', () => {
+            validate()
+        })
+
+        // second part
+
+
+        let sendbtn = document.getElementById("sendbtn");
+        sendbtn.addEventListener('click', () => {
+            let username = document.getElementById("username").value;
+            let userinfo = document.getElementById("userinfo")
+           // let message = document.getElementById("message").value;
+            let getmsg = document.getElementById("getmsg");
+            let formreset = document.getElementById("formreset");
+            // getmsg.innerHTML = message;
+           // userinfo.innerHTML = `${username}:-`;
+           
+           displayMessage()
+            formreset.reset();
+          
+        })
+
+      function displayMessage(){
+        let username = document.getElementById("username").value;
+        let message = document.getElementById("message").value;
+        let userinfo = document.getElementById("userinfo")
+        let spans = document.createElement("span")
+        const divs = document.createElement("div")
+        spans.textContent = `${username}:-`
+         divs.textContent = message;
+         spans.classList.add("spans");
+         divs.classList.add("divs")
+          document.getElementById("disp").append(spans)
+          document.getElementById("disp").append(divs)
+         console.log(divs)
+      }
+
+    
+    </script>
+
+    <script src="app.js"></script>
+</body>
+
+</html>

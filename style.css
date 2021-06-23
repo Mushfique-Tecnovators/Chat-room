@@ -1,0 +1,156 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+ul{
+    list-style: none;
+}
+header{
+    height:120px;
+    background: #009688;
+}
+body{
+    background: white;
+    font-family: 'Poppins', sans-serif;
+
+}
+/* .container{
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    background:rgb(158, 147, 147);
+    height: 60vh;
+    width: 50%;
+} */
+#form1 label{
+     font-size: 35px;
+     color:white;
+}
+#form1 input{
+    width:90%;
+    padding: 5px 18px;
+    font-size: 18px;
+
+}
+#btn1{
+    border:none;
+    outline: none;
+    border-radius: 5px;
+    padding:10px 15px;
+    width: 100%;
+    margin-top: 50px;
+    background: seagreen;
+    color:white;
+}
+.form{
+   width: 100%;
+   height: 100%;
+  
+   display: flex;
+   justify-content: center;
+   align-items: center;
+}
+#form1{
+    height: 400px;
+    width: 400px;
+  
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+}
+.container1{
+    background: url('Images/bg.png');
+    display: flex;
+    height:70vh;
+    width: 80%;
+    margin:0 auto;
+  
+    
+    /* overflow-y: scroll;  */
+   z-index: 1;
+
+}
+.sub{
+    width: 100%;
+    height: 100%;
+    background-color: #E2DAD2;
+     overflow-y:auto;
+    /* overflow:hidden */
+    opacity: 0.9;
+   
+}
+#img1{
+  width:50%;
+  height: 100%;
+  opacity: 0.16;
+}
+#top-header{
+    background: hsl(0, 0%, 100%);
+    height:80px;
+    width: 79.5%;
+    position: fixed;
+    margin-top: -80px;
+    display: flex;
+}
+#footer{
+    height: 80px;
+    width: 79.5%;
+    position:fixed;
+    top:87vh;
+    /* margin-top: -15px; */
+    background: #CCEAE7;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 3px 3px;
+}
+#logo{
+    width: 70px;
+    height: 70px;
+    margin-top: 10px;
+}
+#h4{
+    display: inline-block;
+    font-size: 20px;
+    
+  
+}
+.form{
+ 
+}
+#error{
+    color:red;
+    font-size: 20px;
+    visibility: hidden;
+}
+
+#message{
+    padding: 10px;
+    width: 80%;
+    margin-left: 10px;
+    font-size: 20px;
+}
+#sendbtn{
+    display: inline-block;
+    padding: 10px 30px;
+    margin-left: 20px;
+}
+.next{
+    visibility: hidden;
+}
+
+#getmsg{
+    display: inline-block;
+}
+.main{
+   text-align: justify;
+}
+
+.spans{
+    background:#eee;
+    color: black;
+    padding: 7px 15px;
+}
+.divs{
+    display:flex;
+    padding: 0 20px;
+}
+ #disp{
+    display: flex;
+flex-direction: column;
+
+} 
